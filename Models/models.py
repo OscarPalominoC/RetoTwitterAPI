@@ -12,17 +12,21 @@ from pydantic import Field
 
 # Models
 
+# Password mixin
+class PasswordMixin(BaseModel):
+    Password: str = Field(
+        ...,
+        min_length=8
+    )
+
 # UserBase model
 class UserBase(BaseModel):
     UserId: UUID = Field(...)
     Email: EmailStr = Field(...)
     
 # User login
-class UserLogin(UserBase):
-    Password: str = Field(
-        ...,
-        min_length=8
-    )
+class UserLogin(UserBase, PasswordMixin):
+    pass
 
 # User model
 class User(UserBase):
@@ -39,6 +43,10 @@ class User(UserBase):
         example="García"
     )
     BirthDate: Optional[date] = Field(default=None)
+
+# User registration
+class UserRegister(User, PasswordMixin):
+    pass
 
 # Twitter model
 class Tweet(BaseModel):
