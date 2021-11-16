@@ -17,7 +17,7 @@ class UserBase(BaseModel):
     UserId: UUID = Field(...)
     Email: EmailStr = Field(...)
     
-
+# User login
 class UserLogin(UserBase):
     Password: str = Field(
         ...,
@@ -39,7 +39,6 @@ class User(UserBase):
         example="García"
     )
     BirthDate: Optional[date] = Field(default=None)
-
 
 # Twitter model
 class Tweet(BaseModel):
