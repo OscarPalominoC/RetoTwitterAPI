@@ -43,4 +43,12 @@ class User(UserBase):
 
 # Twitter model
 class Tweet(BaseModel):
-    pass
+    TweetId: UUID = Field(...)
+    Content: str = Field(
+        ...,
+        min_length=1,
+        max_length=250
+    )
+    CreatedAt: datetime = Field(default=datetime.now())
+    UpdatedAt: Optional[datetime] = Field(default=None)
+    By: User = Field(...)
