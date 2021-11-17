@@ -16,13 +16,14 @@ from pydantic import Field
 class PasswordMixin(BaseModel):
     Password: str = Field(
         ...,
-        min_length=8
+        min_length=8,
+        example="P@ssw0rd!"
     )
 
 # UserBase model
 class UserBase(BaseModel):
     UserId: UUID = Field(...)
-    Email: EmailStr = Field(...)
+    Email: EmailStr = Field(..., example="jose@garcia.com")
     
 # User login
 class UserLogin(UserBase, PasswordMixin):

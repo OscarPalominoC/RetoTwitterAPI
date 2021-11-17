@@ -1,16 +1,16 @@
 # Python
 from typing import List
+import json
 
 # FastAPI
 from fastapi import FastAPI
 from fastapi import status
+from fastapi import Body
 
 # Models
-from Models.models import Tweet, User, UserLogin
+from Models.models import Tweet, User, UserLogin, UserRegister
 
 app = FastAPI()
-
-
 
 # Path Operations
 
@@ -24,7 +24,7 @@ app = FastAPI()
     summary="User registration.",
     response_model=User
     )
-def signup():
+def signup(user: UserRegister = Body(...)):
     """
 # Signup
 
@@ -35,13 +35,23 @@ This Path Operation register an user in the app.
     * user: UserRegister
 
 ## Return
-Returns a Json with an user's basic information
+Returns a Json with an  user's basic information
 * UserId: UUID
 * Email: EmailStr
 * FirstName: str
 * LastName: str
-* Birthdate: Optional[date]
+* BirthDate: Optional[date]
     """
+    with open("users.json", "r+", encoding="utf-8") as f:
+        results = json.loads(f.read())
+        user_dict = user.dict()
+        user_dict["UserId"] = str(user_dict["UserId"])
+        user_dict["BirthDate"] = str(user_dict["BirthDate"])
+        results.append(user_dict)
+        f.seek(0)
+        f.write(json.dumps(results))
+        return user
+
 
 ### User login
 @app.post(
@@ -63,7 +73,25 @@ def login():
     response_model=List[User]
     )
 def show_all_users():
-    pass
+    """
+# Show all users
+
+This Path Operation shows all users in the app.
+
+## Parameters
+*No parameters*.
+
+## Returns
+Returns a Json list with all useris in the app, with the following keys.
+* UserId: UUID
+* Email: EmailStr
+* FirstName: str
+* LastName: str
+* BirthDate: Optional[date]
+    """
+    with open("users.json", "r", encoding="utf-8") as f:
+        results = json.loads(f.read())
+        return results
 
 ### Show an user
 @app.get(
