@@ -55,7 +55,8 @@ class Tweet(BaseModel):
     Content: str = Field(
         ...,
         min_length=1,
-        max_length=250
+        max_length=250,
+        example="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, ducimus doloribus. Molestiae ad tempore consequuntur maxime aliquid nostrum facilis deleniti laborum assumenda. Doloribus laudantium perspiciatis nemo ex molestias excepturi sit?"
     )
     CreatedAt: datetime = Field(default=datetime.now())
     UpdatedAt: Optional[datetime] = Field(default=None)

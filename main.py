@@ -152,8 +152,42 @@ Show all the tweets.
     summary="Post a tweet.",
     response_model=Tweet
     )
-def post():
-    pass
+def post(tweet: Tweet = Body(...)):
+    """
+# Post a tweet
+
+This Path Operation post a tweet in the app.
+
+## Parameters:
+* Request Body Parameter:
+    * tweet: Tweet
+
+## Return
+Returns a Json with a Tweet's basic information
+* TweetId: UUID
+* Content: str
+* CreatedAt: datetime
+* UpdatedAt: Optional[datetime]
+* By: User
+    * UserId: UUID
+    * Email: EmailStr
+    * FirstName: str
+    * LastName: str
+    * BirthDate: Optional[date]
+    """
+    with open("tweets.json", "r+", encoding="utf-8") as f:
+        results = json.loads(f.read())
+        tweet_dict = tweet.dict()
+        tweet_dict["TweetId"] = str(tweet_dict["TweetId"])
+        tweet_dict["CreatedAt"] = str(tweet_dict["CreatedAt"])
+        tweet_dict["UpdatedAt"] = str(tweet_dict["UpdatedAt"])
+        tweet_dict["By"]["UserId"] = str(tweet_dict["By"]["UserId"])
+        tweet_dict["By"]["BirthDate"] = str(tweet_dict["By"]["BirthDate"])
+        
+        results.append(tweet_dict)
+        f.seek(0)
+        f.write(json.dumps(results))
+        return tweet
 
 ### Show a tweet
 @app.get(
