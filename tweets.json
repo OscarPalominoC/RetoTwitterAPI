@@ -1,1 +1,41 @@
-[{"TweetId": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "Content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, ducimus doloribus. Molestiae ad tempore consequuntur maxime aliquid nostrum facilis deleniti laborum assumenda. Doloribus laudantium perspiciatis nemo ex molestias excepturi sit?", "CreatedAt": "2021-11-16 21:32:45.561215", "UpdatedAt": "2021-11-17 02:33:01.898000+00:00", "By": {"UserId": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "Email": "jose@garcia.com", "FirstName": "Jose", "LastName": "Garc\u00eda", "BirthDate": "2021-11-17"}}, {"TweetId": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "Content": "Hola este es mi primer tweet", "CreatedAt": "2021-11-16 21:32:45.561215", "UpdatedAt": "2021-11-17 02:33:01.898000+00:00", "By": {"UserId": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "Email": "oscar@example.com", "FirstName": "Oscar", "LastName": "Palomino", "BirthDate": "2021-11-17"}}, {"TweetId": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "Content": "Me voy de Tweeter!!!", "CreatedAt": "2021-11-16 21:32:45.561215", "UpdatedAt": "2021-11-17 02:33:01.898000+00:00", "By": {"UserId": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "Email": "lisney@example.com", "FirstName": "Lisney", "LastName": "Gomez", "BirthDate": "2021-11-17"}}]
+[
+    {
+        "TweetId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "Content": "Este tweet ha sido modificado",
+        "CreatedAt": "2021-11-16 21:32:45.561215",
+        "UpdatedAt": "2021-11-21 20:04:55.526482",
+        "By": {
+            "UserId": "3fa85f64-5717-4562-b3fc-2c963f66afa0",
+            "Email": "jose@garcia.com",
+            "FirstName": "Jose",
+            "LastName": "Garc\u00eda",
+            "BirthDate": "2021-11-17"
+        }
+    },
+    {
+        "TweetId": "3fa85f64-5717-4562-b3fc-2c963f66afa1",
+        "Content": "Hola este es mi primer tweet",
+        "CreatedAt": "2021-11-16 21:32:45.561215",
+        "UpdatedAt": "2021-11-17 02:33:01.898000+00:00",
+        "By": {
+            "UserId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "Email": "oscar@example.com",
+            "FirstName": "Oscar",
+            "LastName": "Palomino",
+            "BirthDate": "2021-11-17"
+        }
+    },
+    {
+        "TweetId": "3fa85f64-5717-4562-b3fc-2c963f66afa8",
+        "Content": "Me voy de Tweeter!!!",
+        "CreatedAt": "2021-11-16 21:32:45.561215",
+        "UpdatedAt": "2021-11-17 02:33:01.898000+00:00",
+        "By": {
+            "UserId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "Email": "lisney@example.com",
+            "FirstName": "Lisney",
+            "LastName": "Gomez",
+            "BirthDate": "2021-11-17"
+        }
+    }
+]

@@ -1,1 +1,34 @@
-[{"Password": "P@ssw0rd!", "UserId": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "Email": "jose@garcia.com", "FirstName": "Jose", "LastName": "Garcia", "BirthDate": "2021-11-16"}, {"Password": "P@ssw0rd!", "UserId": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "Email": "Jose@example.com", "FirstName": "Jose", "LastName": "Vecino", "BirthDate": "2021-11-17"}, {"Password": "P@ssw0rd!", "UserId": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "Email": "lisney@example.com", "FirstName": "Lisney", "LastName": "Gomez", "BirthDate": "2021-11-17"}, {"Password": "P@ssw0rd!", "UserId": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "Email": "oscar@example.com", "FirstName": "Oscar", "LastName": "Palomino", "BirthDate": "2021-11-17"}]
+[
+    {
+        "BirthDate": "1991-10-20",
+        "Email": "ing.oscarp1@gmail.com",
+        "FirstName": "Oscar Eduardo",
+        "LastName": "Palomino Cardenas",
+        "Password": "Zim182Liss",
+        "UserId": "3fa85f64-5717-4562-b3fc-2c963f66afa0"
+    },
+    {
+        "BirthDate": "2021-11-17",
+        "Email": "Jose@example.com",
+        "FirstName": "Jose",
+        "LastName": "Vecino",
+        "Password": "P@ssw0rd!",
+        "UserId": "3fa85f64-5717-4562-b3fc-2c963f66afa1"
+    },
+    {
+        "BirthDate": "2021-11-17",
+        "Email": "lisney@example.com",
+        "FirstName": "Lisney",
+        "LastName": "Gomez",
+        "Password": "P@ssw0rd!",
+        "UserId": "3fa85f64-5717-4562-b3fa-2c963f66afa6"
+    },
+    {
+        "BirthDate": "2021-11-17",
+        "Email": "oscar@example.com",
+        "FirstName": "Oscar",
+        "LastName": "Palomino",
+        "Password": "P@ssw0rd!",
+        "UserId": "3fa85f66-5717-4562-b3fc-2c963f66afa4"
+    }
+]
